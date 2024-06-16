@@ -40,8 +40,9 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: Pending
-- Live Site URL: Pending
+- Solution URL:  [Github repository](https://github.com/memominguez/dictionary-app)
+- Live Site URL:  [Netlify](https://english-lang-dictionary.netlify.app)
+
 
 ## My process
 
