@@ -1,0 +1,309 @@
+.container {
+  width: 375px;
+  margin-inline: auto;
+  background-color: var(--bg-1);
+  color: var(--text-1);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  color: var(--text-1);
+  margin-bottom: 12px;
+}
+
+.header .header-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+/* *** Select component *** */
+.select-container {
+  margin-right: 24px;
+}
+
+.select-container select {
+  border: none;
+  background: var(--bg-2);
+  color: var(--text-1);
+  outline: var(--text-violet);
+  font-size: 14px;
+}
+
+/* *** Theme switch *** */
+.theme-container {
+  display: flex;
+  gap: 24px;
+}
+
+.theme-container .theme-icon {
+  transform: scale(1.7);
+  border: none;
+  background-color: var(--bg-1);
+  color: var(--text-2);
+}
+
+.theme-container .theme-icon.active {
+  color: rgb(0, 236, 236);
+}
+
+/* *** Input *** */
+.input-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.input-field .input {
+  width: 327px;
+  height: 48px;
+  background: var(--bg-2);
+  border-color: transparent;
+  border-radius: 12px;
+  padding-left: 12px;
+  font-size: 1.1rem;
+  color: var(--text-1);
+  outline: none;
+}
+
+.input[type="text"]:focus {
+  border: 1px solid var(--text-violet);
+}
+
+.input[type="text"].error {
+  border: 1px solid red;
+}
+
+.input-field .button-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 32px;
+  gap: 15px;
+}
+
+.button-box .clear-button,
+.button-box .submit-button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-violet);
+  transform: scale(2);
+}
+
+.button-box span {
+  color: var(--text-violet);
+  transform: translateY(-5px);
+}
+
+.input-error {
+  color: red;
+  font-size: small;
+}
+
+/*  *** List header *** */
+.list-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.list-header .left h1 {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.list-header .left p {
+  font-size: 18px;
+  color: var(--text-violet);
+}
+
+.list-header .play-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* *** Divider *** */
+.divider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.divider p {
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.divider .divider-line {
+  width: 266px;
+  height: 1px;
+  background-color: #979797;
+}
+
+/* *** Definitions List */
+
+.meaning-title {
+  color: var(--text-2);
+  margin-left: 12px;
+}
+
+.list-area {
+  width: 100%;
+  padding: 10px 16px 10px 32px;
+}
+
+.list-area ul li {
+  margin: 10px;
+  font-size: 15px;
+}
+
+.list-area .synonyms-title {
+  color: var(--text-2);
+  margin-left: -20px;
+  margin-top: 16px;
+}
+
+.list-area .synonyms {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.list-area .synonyms p {
+  color: var(--text-violet);
+  font-weight: bold;
+}
+
+/* *** Source Section *** */
+.source-paragraph {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 12px;
+  padding-top: 15px;
+  padding-bottom: 24px;
+  gap: 6px;
+  border-top: solid 1px var(--text-2);
+}
+
+.source-title {
+  color: var(--text-2);
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.source-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 30px; 
+}
+
+.source-link p {
+  font-size: 14px;
+}
+
+/* *** Error message *** */
+.error-message {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.error-message h1 {
+  margin-bottom: 3rem;
+}
+
+/* *** Responsive *** */
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 737px;
+  }
+
+  .select-container select {
+    font-size: 16px;
+  }
+
+  .input-field .input {
+    width: 736px;
+    height: 64px;
+    font-size: 1.3rem;
+  }
+
+  .input-field .button-box {
+    right: 20px;
+    top: 25px;
+  }
+
+  .list-header .left h1 {
+    font-size: 64px;
+  }
+
+  .list-header .left p {
+    font-size: 24px;
+  }
+
+  .divider p {
+    font-size: 24px;
+  }
+
+  .divider .divider-line {
+    width: 608px;
+  }
+
+  /* *** Definitions List */
+  .meaning-title {
+    font-size: 20px;
+  }
+
+  .list-area ul li {
+    font-size: 18px;  
+  }
+
+  .list-area .synonyms-title {
+    font-size: 20px;
+    margin-top: 24px;
+  }
+
+  .list-area .synonyms p {
+    font-size: 20px;
+  }
+
+  .source-paragraph {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .source-title {
+    text-decoration: none;
+  }
+}
+
+/* *** Select Font *** */
+.container:is(.sanserif) {
+  font-family: "Inter", sans-serif;
+}
+.container:is(.serif) {
+  font-family: "Lora", serif;
+}
+.container:is(.mono) {
+  font-family: "Inconsolata", monospace;
+}
