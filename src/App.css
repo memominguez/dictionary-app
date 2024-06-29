@@ -158,6 +158,14 @@
   background-color: #979797;
 }
 
+/* *** Cover Message */
+.cover-message {
+  margin-top: 60px;
+  text-align: center;
+  color: var(--text-1);
+  font-size: x-large;
+}
+
 /* *** Definitions List */
 
 .meaning-title {

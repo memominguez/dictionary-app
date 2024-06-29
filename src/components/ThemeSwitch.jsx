@@ -72,7 +72,7 @@ export default function ThemeSwitch() {
             onClick={() => setTheme(opt.text)}
             className={theme === opt.text ? "theme-icon active" : "theme-icon"}           
           >
-            <ion-icon name={opt.icon}></ion-icon>
+            <ion-icon name={opt.icon} role="img" className="md hydrated"></ion-icon>
           </button>
 
         ))}

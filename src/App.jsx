@@ -13,6 +13,7 @@ function App() {
   const [error, setError] = useState(null);
   const [inputError, setInputError] = useState("");
   const [selectedFont, setSelectedFont] = useState("sanserif");
+  const [coverMsg, setCoverMsg] = useState(true);
 
   const api = "https://api.dictionaryapi.dev/api/v2/entries/en";
 
@@ -21,6 +22,7 @@ function App() {
       setResult(null);
       const response = await axios.get(`${api}/${word}`);
       setResult(response.data);
+      setCoverMsg(false);
       setError(null); // Clear any previous error
     } catch (err) {
       setError("Word not found");
@@ -47,9 +49,9 @@ function App() {
   };
 
   const handleClear = () => {
-    setWord("")
-    setInputError("")
-  }
+    setWord("");
+    setInputError("");
+  };
 
   //console.log(result);
 
@@ -57,10 +59,12 @@ function App() {
     <div className={`container ${selectedFont}`}>
       <Header selectedFont={selectedFont} setSelectedFont={setSelectedFont} />
       <main>
+       
+
         <form className="input-field" onSubmit={handleSubmit}>
           <input
             type="text"
-            autoFocus            
+            autoFocus
             value={word}
             onChange={(e) => setWord(e.target.value)}
             onKeyDown={handleKeyPress}
@@ -69,12 +73,16 @@ function App() {
           />
 
           <div className="button-box">
-            <button type="button" className="clear-button" onClick={handleClear}>
-              <ion-icon name="close"></ion-icon>
+            <button
+              type="button"
+              className="clear-button"
+              onClick={handleClear}
+            >
+              <ion-icon name="close" role="img" className="md hydrated"></ion-icon>
             </button>
             <span>&#x2758;</span>
             <button type="submit" className="submit-button">
-              <ion-icon name="search"></ion-icon>
+              <ion-icon name="search" role="img" className="md hydrated"></ion-icon>
             </button>
           </div>
 
@@ -84,6 +92,8 @@ function App() {
         {error && <ErrorMessage />}
 
         {result && <DisplayResult result={result} />}
+
+        {coverMsg && <h1 className="cover-message">ENGLISH DICTIONARY</h1>}
       </main>
     </div>
   );

@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import Select from "react-select";
 import logo from "../assets/images/logo.svg";
 import ThemeSwitch from "./ThemeSwitch";
 
